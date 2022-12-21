@@ -9,7 +9,7 @@
 # Input: strs = ["dog","racecar","car"]
 # Output: ""
 # Explanation: There is no common prefix among the input strings.
- 
+
 # Constraints:
 
 # 1 <= strs.length <= 200
@@ -18,7 +18,7 @@
 
 def longestCommonPrefix(strs):
     lowest_len_string_len = 201
-    lowest_len_string_index= 0
+    lowest_len_string_index = 0
     longest_prefix = ""
     for j, n in enumerate(strs):
         if lowest_len_string_len >= len(n):
@@ -34,10 +34,11 @@ def longestCommonPrefix(strs):
             if prefix_status == False:
                 break
         if prefix_status == False:
-                break
+            break
         longest_prefix = longest_prefix + d
     return longest_prefix
 
-print(longestCommonPrefix(["dog","racecar","car"]))
-print(longestCommonPrefix(["flower","flow","flight"]))
-print(longestCommonPrefix(["cir","car"]))
+
+print(longestCommonPrefix(["dog", "racecar", "car"]))
+print(longestCommonPrefix(["flower", "flow", "flight"]))
+print(longestCommonPrefix(["cir", "car"]))
