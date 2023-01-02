@@ -29,11 +29,11 @@ from typing import List
 
 class Solution:
     def plusOne1(self, digits: List[int]) -> List[int]:
-        stringDigits = ''.join(str(d) for d in digits)
+        stringDigits = ''.join(str(d) for d in digits) # number list to string
         plusOneDigits = int(stringDigits) + 1
         plusOneList = []
-        plusOneList[:0] = str(plusOneDigits)
-        return list(map(int, plusOneList))
+        plusOneList[:0] = str(plusOneDigits) # split string by char to list
+        return list(map(int, plusOneList)) # list casting to int into new list
 
     def plusOne2(self, digits: List[int]) -> List[int]:
         digits[-1] += 1
