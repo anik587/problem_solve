@@ -46,12 +46,15 @@
 # 0 <= nums.length <= 100
 # 0 <= nums[i] <= 50
 # 0 <= val <= 100
-from types import List
+from typing import List
 
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
-        return 2
-
+        unmatched: List[int] = nums.copy()
+        for i in unmatched:
+            if i == val:
+                nums.remove(i)
+        return len(nums)
 sol = Solution()
 
 
