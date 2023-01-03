@@ -20,3 +20,25 @@
 # 2. 1 step + 2 steps
 # 3. 2 steps + 1 step
  
+class Solution:
+    def climbStairs1(self, n: int) -> int:
+        preOne = 0
+        preTwo = 1
+        for i in range(n):
+            sum = preOne + preTwo
+            preOne = preTwo
+            preTwo = sum
+        return sum
+
+    #def climStairs2(self, n: int) -> int:
+
+
+sol = Solution()
+print(sol.climbStairs(1))
+print(sol.climbStairs(2))
+print(sol.climbStairs(3))
+print(sol.climbStairs(4))
+print(sol.climbStairs(5))
+print(sol.climbStairs(6))
+print(sol.climbStairs(7))
+print(sol.climbStairs(8))
