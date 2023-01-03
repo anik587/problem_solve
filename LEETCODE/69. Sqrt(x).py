@@ -20,3 +20,18 @@
 # Constraints:
 
 # 0 <= x <= 231 - 1
+
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        temp:float = 0.0
+        sqrt:float = 0.0
+        sqrt = x/2
+        while (temp != sqrt):
+            temp = sqrt
+            sqrt = ((x / temp) + temp) / 2
+        return isinstance(sqrt, int)
+
+sol = Solution()
+print(sol.mySqrt(4))
+print(sol.mySqrt(8))
+print(sol.mySqrt(256))
