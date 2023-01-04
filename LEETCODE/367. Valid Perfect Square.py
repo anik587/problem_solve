@@ -33,6 +33,10 @@ class Solution:
             sqrt = ((num / temp) + temp) / 2
         return sqrt.is_integer()
 
+    def isPerfectSquare2(self, num: int) -> bool:
+        if num**0.5 == round(num**0.5): return True
+        else: False
+
 sol = Solution()
 print(sol.isPerfectSquare(4))
 print(sol.isPerfectSquare(166))
