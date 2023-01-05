@@ -26,10 +26,11 @@ class Solution:
         temp:float = 0.0
         sqrt:float = 0.0
         sqrt = x/2
+        flag = True
         while (temp != sqrt):
             temp = sqrt
             sqrt = ((x / temp) + temp) / 2
-        return isinstance(sqrt, int)
+        return int(sqrt)
 
 sol = Solution()
 print(sol.mySqrt(4))
