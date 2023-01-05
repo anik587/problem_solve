@@ -19,11 +19,12 @@
 
 class Solution:
     def isPowerOfFour(self, n: int) -> bool:
-        if n < 1:
-            return False
-        while n % 4 == 0:
-            n = n // 4
-        return n == 1
+        # if n < 1:
+        #     return False
+        # while n % 4 == 0:
+        #     n = n // 4
+        # return n == 1
+        return (n.bit_length()%2==1 and n & (n-1) == 0)
 
 sol = Solution()
 print(sol.isPowerOfFour(-1))
