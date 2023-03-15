@@ -42,7 +42,10 @@ class Solution:
         high = len(input_array)
         while low <= high:
             if low == high:
-                return mid if value > input_array[low] else low
+                if low < len(input_array):
+                    return mid if value > input_array[low] else low
+                else:
+                    return low                
             mid = int((high + low)/2)
             if value == input_array[mid]:
                 return mid
@@ -53,7 +56,7 @@ class Solution:
         return mid
 sol = Solution()
 
-print(sol.searchInsert([1,3,5,6], 5))
-print(sol.searchInsert([1,3,5,6], 2))
-print(sol.searchInsert([1,3,5,6], 7))
+print(sol.searchInsert2([1,3,5,6], 5))
+print(sol.searchInsert2([1,3,5,6], 2))
+print(sol.searchInsert2([1,3,5,6], 7))
 
