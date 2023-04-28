@@ -52,3 +52,12 @@ class Solution:
         for i in range(k):
             nums.insert(0, nums.pop())
         print(nums)
+    
+    def rotate(self, nums: List[int], k: int) -> None:
+        if len(nums)<k:
+            size = k
+        else:
+            size = k%len(nums)
+        for i in range(size):
+            nums.insert(0, nums.pop())
+        print(nums)
