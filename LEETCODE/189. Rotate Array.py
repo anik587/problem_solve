@@ -35,3 +35,20 @@
 
 # Try to come up with as many solutions as you can. There are at least three different ways to solve this problem.
 # Could you do it in-place with O(1) extra space?
+
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        if len(nums)<k:
+            for i in range(k):
+                nums[:]=[nums[-1]]+nums[0:-1]
+        else:
+            nums[:]=nums[-k:]+nums[0:-k]
+        print(nums)
+
+    def rotate2(self, nums: List[int], k: int) -> None:
+        for i in range(k):
+            nums.insert(0, nums.pop())
+        print(nums)
