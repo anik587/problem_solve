@@ -45,6 +45,7 @@
 # 1 <= n <= 1000
 # 0 <= player1[i], player2[i] <= 10
 
+from typing import List
 class Solution:
     def isWinner(self, player1: List[int], player2: List[int]) -> int:
         sumPlayer1 = 0
