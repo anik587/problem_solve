@@ -30,6 +30,8 @@
 # 1 <= A.length == B.length == n <= 50
 # 1 <= A[i], B[i] <= n
 # It is guaranteed that A and B are both a permutation of n integers.
+
+
 from typing import List
 
 class Solution:
@@ -59,6 +61,4 @@ class Solution:
                 else:
                     seenElement.append(B[i])
                 prefix.append(prefix[-1] + count)
-            print('prefix', prefix)
-            print('seenElement', seenElement)
         return prefix
