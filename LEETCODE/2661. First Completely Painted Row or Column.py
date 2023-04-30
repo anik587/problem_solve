@@ -51,4 +51,8 @@ class Solution:
             if rows[row] == n or cols[col] == m:
                 return i
         return -1
-            
+
+sol = Solution()
+
+print(sol.firstCompleteIndex([1,3,4,2], [[1,4],[2,3]]))
+print(sol.firstCompleteIndex([2,8,7,4,1,3,5,6,9], [[3,2,5],[1,4,6],[8,7,9]]))
